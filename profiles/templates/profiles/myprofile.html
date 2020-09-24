@@ -8,7 +8,7 @@
   </div>
   <div class="image content">
     <div class="ui medium image">
-      <img src="{{ profile.avatar.url }}">
+      <img src="{{ profile.avatar.url }}" height="200px" width="200px">
     </div>
     <div class="description">
       <div class="ui header">Provide some additional info about you.</div>
@@ -34,7 +34,7 @@
     <div class="ui grid">
       <div class='row'>
         <div class='six wide column'>
-          <img class='ui medium rounded image' src={{ profile.avatar.url }}>
+          <img class='ui medium rounded image' height="100px" width="100px" src="{{ profile.avatar.url }}">
           <div class="row mt-5">
             <button class="ui secondary button" id="mymodal">Update your profile</button>
           </div>
@@ -53,6 +53,30 @@
               <tr>
                 <td>LastName</td>
                 <td>{{ profile.last_name}}</td>
+              </tr>
+              <tr>
+                <td>Email</td>
+                <td>{{ profile.email }}</td>
+              </tr>
+              <tr>
+                <td>Number Of Friends</td>
+                <td>{{ profile.get_friends_count }}</td>
+              </tr>
+              <tr>
+                <td>Number Of Posts</td>
+                <td>{{ profile.get_number_of_posts }}</td>
+              </tr>
+              <tr>
+                <td>Number Of Likes Given</td>
+                <td>{{ profile.get_number_of_likes_given }}</td>
+              </tr>
+              <tr>
+                <td>Number Of Likes Received</td>
+                <td>{{ profile.get_number_of_likes_received }}</td>
+              </tr>
+              <tr>
+                <td>Number Of Comment</td>
+                <td>{{ profile.get_number_of_comments }}</td>
               </tr>
             </tbody>
           </table>
